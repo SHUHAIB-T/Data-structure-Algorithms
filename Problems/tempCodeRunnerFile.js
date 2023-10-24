@@ -1,1 +1,1 @@
-console.log("mid: " + mid);
+list.print()

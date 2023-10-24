@@ -1,7 +1,7 @@
 
 // implementation of Linked List
-class Node{
-    constructor(value){
+class Node {
+    constructor(value) {
         this.value = value;
         this.next = null;
     }
@@ -9,34 +9,47 @@ class Node{
 
 // linked list class
 class LinkedList {
-    constructor(){
+    constructor() {
         this.head = null;
         this.size = 0;
     }
-    isEmpty(){
+    isEmpty() {
         return this.size == 0;
     }
-    getSize(){
+    getSize() {
         return this.size;
     }
-    prepend(value){
+    prepend(value) {
         let node = new Node(value);
-        if(this.isEmpty()){
+        if (this.isEmpty()) {
             this.head = node;
-        }else{
+        } else {
             node.next = this.head;
             this.head = node;
         }
         this.size++;
     }
-
-    print(){
-        if(this.isEmpty()){
-            console.log("this is an empty LinkedList")
-        }else{
+    append(value) {
+        let node = new Node(value);
+        if (this.isEmpty()) {
+            this.head = node;
+        } else {
             let temp = this.head;
-            let output ='';
-            while(temp != null){
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = node;
+        }
+        this.size++;
+    }
+
+    print() {
+        if (this.isEmpty()) {
+            console.log("this is an empty LinkedList")
+        } else {
+            let temp = this.head;
+            let output = '';
+            while (temp != null) {
                 output += `${temp.value},`;
                 temp = temp.next;
             }
@@ -47,6 +60,8 @@ class LinkedList {
 
 
 let list = new LinkedList();
-list.prepend(10);
-list.prepend(20);
+
+list.append(10);
+list.append(20);
+list.append(30);
 list.print();
