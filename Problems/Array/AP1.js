@@ -1,5 +1,9 @@
-// you are given a target and a array,return two number can get the sum as target
+/*you are given a target and a array,return 
+two number can get the sum as target
 
+input => array = [2, 4, 5, 6, 8, 3, 5, 6], target = 10;
+output => [6,4]
+*/
 
 // funtion with o(1)S, o(n^2)T
 function findTarget(array, target) {

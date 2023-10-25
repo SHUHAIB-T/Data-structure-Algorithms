@@ -1,10 +1,13 @@
+/* 
+delete a node in linked list.
+*/
+
 class Node {
     constructor(value) {
         this.value = value;
         this.next = null;
     }
 }
-
 class LinkedList {
     constructor() {
         this.head = null;
@@ -27,22 +30,26 @@ class LinkedList {
         this.size++;
     }
     delete(value) {
-        if(this.isEmpty()){
+        if (this.isEmpty()) {
+            console.log("list is empty");
             return;
         }
-        if(this.head.value === value){
-            
-        }
-        let current = this.head;
-        let prev = null;
-        while (current != null) {
-            if (current.value === value) {
-                prev.next = current.next;
-                this.size--;
-                return;
+        if (this.head.value === value) {
+            this.head = this.head.next;
+            this.size--;
+            return;
+        } else {
+            let current = this.head;
+            let prev = null;
+            while (current) {
+                if (current.value === value) {
+                    prev.next = current.next;
+                    this.size--;
+                    return;
+                }
+                prev = current;
+                current = current.next;
             }
-            prev = current;
-            current = current.next;
         }
     }
 
