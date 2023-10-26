@@ -1,1 +1,1 @@
-list.deletAllDuplicates();
+list.reverse();

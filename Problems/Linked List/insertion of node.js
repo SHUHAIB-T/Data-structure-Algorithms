@@ -62,7 +62,7 @@ class LinkedList {
         let current = this.head;
         let output = "";
         while(current){
-            output += `${current.value}, `;
+            output += `${current.value} => `;
             current = current.next;
         }
         console.log(output);
@@ -74,5 +74,5 @@ list.append(20);
 list.append(10);
 list.append(40);
 list.append(30);
-list.insert(30,100)
+list.insert(30,100);
 list.print();
