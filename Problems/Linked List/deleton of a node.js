@@ -38,18 +38,19 @@ class LinkedList {
             this.head = this.head.next;
             this.size--;
             return;
-        } else {
-            let current = this.head;
-            let prev = null;
-            while (current) {
-                if (current.value === value) {
-                    prev.next = current.next;
-                    this.size--;
-                    return;
-                }
-                prev = current;
-                current = current.next;
+        }
+
+        
+        let current = this.head;
+        let prev = null
+        while (current) {
+            if (current.value === value) {
+                prev.next = current.next;
+                this.size--;
+                return;
             }
+            prev = current;
+            current = current.next;
         }
     }
 

@@ -60,6 +60,9 @@ class LinkedList {
         if (this.isEmpty()) return;
         if (value === this.head.value) {
             this.head = this.head.next;
+            if(this.head === null){
+                this.tail = null;
+            }
             this.size--;
             return;
         }
@@ -67,6 +70,9 @@ class LinkedList {
         let prev = null;
         while (current) {
             if (current.value === value) {
+                if(current === this.tail){
+                    this.tail = prev;
+                }
                 prev.next = current.next;
                 this.size--;
                 return;
