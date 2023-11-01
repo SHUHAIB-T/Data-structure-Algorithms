@@ -25,5 +25,5 @@ class Stack{
  * impliment doule ended queue
  * 5 Sorting(best,worst, space , adv,disadv);
  * delete midlle element in stack
- * infix, postfix and postfix
+ * infix, postfix and pritfix
  */
