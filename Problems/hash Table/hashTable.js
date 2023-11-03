@@ -23,7 +23,8 @@ class HashTable {
         }
     }
     remove(key){
-        
+        let index = this.hash(key);
+        return this.table[index] = undefined;
     }
 }
 
