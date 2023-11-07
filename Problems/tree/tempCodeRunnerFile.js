@@ -1,1 +1,0 @@
-postordertree(root);
