@@ -88,10 +88,6 @@ class BinarySearchTree {
 
         return this.hightOfTree(root.left) + this.hightOfTree(root.right) + 1;
     }
-
-    delete(root, key) {
-
-    }
 }
 
 let bst = new BinarySearchTree();

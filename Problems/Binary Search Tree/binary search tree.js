@@ -73,6 +73,8 @@ class BinarySearchTree {
             console.log(root.value);
         }
     }
+
+    
 }
 
 
