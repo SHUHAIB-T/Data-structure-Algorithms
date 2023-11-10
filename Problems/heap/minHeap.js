@@ -49,6 +49,7 @@ class MinHeap {
         this.heap.push(item);
         this.heapifyUp();
     }
+
     heapifyUp() {
         let index = this.heap.length - 1;
         while (this.hasParentindex(index) && this.parent(index) > this.heap[index]) {
@@ -60,9 +61,8 @@ class MinHeap {
     remove() {
         if (this.heap.length === 0) return null;
         let item = this.heap[0];
-        this.heap[0] = this.heap[this.heap.length - 1];
+        this.heap[0] = this.heap.pop();
         this.heapifyDown();
-        this.heap.pop();
         return item;
     }
 
@@ -103,7 +103,7 @@ heap.add(16);
 heap.add(17);
 heap.add(18);
 heap.add(5);
-heap.remove();
+
 heap.remove();
 
 heap.printHeap()

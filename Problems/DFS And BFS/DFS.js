@@ -29,6 +29,23 @@ class Graph {
             console.log(vertex + "->" + [...this.adjacencyList[vertex]])
         }
     }
+    dfsTraversal(start){
+        let visited = new Set();
+        this.dfsRecursive(start, visited);
+    }
+
+    dfsRecursive(vertex, visited){
+        visited.add(vertex);
+        console.log(vertex);
+
+        let adjacentVertices = this.adjacencyList[vertex];
+
+        for(const adj of adjacentVertices){
+            if(!visited.has(adj)){
+                return this.dfsRecursive(adj, visited);
+            }
+        }
+    }
 }
 
 let graph = new Graph();
@@ -36,6 +53,6 @@ graph.addVertex("A");
 graph.addVertex("B");
 graph.addVertex("C");
 
-graph.addEdge("A","B");
-graph.addEdge("B","C");
-graph.display()
+graph.addEdge("A", "B");
+graph.addEdge("B", "C");
+graph.dfsTraversal("A")

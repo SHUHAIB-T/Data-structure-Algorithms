@@ -31,7 +31,7 @@ class BinarySearchTree {
             if (root.right === null) {
                 root.right = newNode;
             } else {
-                this.insert(root.right, newNode);
+                this.insertNode(root.right, newNode);
             }
         }
 
@@ -85,7 +85,6 @@ class BinarySearchTree {
         if (!root) {
             return 0;
         }
-
         return this.hightOfTree(root.left) + this.hightOfTree(root.right) + 1;
     }
 }
