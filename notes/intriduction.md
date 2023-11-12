@@ -100,5 +100,6 @@ class LinkedList {
             console.log(output);
         }
     }
+    
 }
 ````
