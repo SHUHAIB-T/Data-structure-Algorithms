@@ -77,7 +77,6 @@ class BinarySearchTree {
     
 }
 
-
 let bst = new BinarySearchTree();
 
 bst.insert(10);

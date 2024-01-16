@@ -8,12 +8,10 @@ const findKey = (arr, key) => {
     let start = 0;
     let end = arr.length - 1;
     let mid = Math.floor((start + end) / 2);
-    console.log("mid: ", mid);
     while (start <= end) {
         if (arr[mid] === key) {
             return mid;
         } else {
-            console.log("mid: ", arr[mid]);
             if (arr[mid] < key) {
                 start = mid + 1;
             } else {

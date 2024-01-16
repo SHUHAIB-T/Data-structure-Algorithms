@@ -15,12 +15,8 @@ const bubbleSort1 = (arr1) => {
             }
         }
     } while (swapped);
-
     return arr1;
-
 }
-
-
 
 // using nested for loop.
 const bublesort = (arr) => {
@@ -41,7 +37,6 @@ const bublesort = (arr) => {
             break;
         }
     }
-
     return arr;
 }
 

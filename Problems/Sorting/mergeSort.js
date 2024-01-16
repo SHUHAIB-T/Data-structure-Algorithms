@@ -1,5 +1,4 @@
 // implimentastion of merge sort
-
 function mergeSort(array) {
     // base condition
     if (array.length === 1) {

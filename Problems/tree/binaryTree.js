@@ -1,14 +1,11 @@
 // implimentation of binary tree.
-
-
-
 class BinaryTreeNode {
     constructor(data) {
         this.data = data;
         this.left = null;
         this.right = null;
     }
-
+    
     insertLeft(value) {
         this.left = new BinaryTreeNode(value);
     }

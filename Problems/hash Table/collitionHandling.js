@@ -54,7 +54,7 @@ class HashTable {
     }
     display() {
         for (let i = 0; i < this.table.length; i++) {
-            if(this.table[i]){
+            if (this.table[i]) {
                 console.log(i, this.table[i])
             }
         }
