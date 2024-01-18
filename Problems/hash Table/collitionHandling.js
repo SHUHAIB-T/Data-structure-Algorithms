@@ -66,5 +66,4 @@ const myHashTable = new HashTable(10);
 myHashTable.set("name", "John");
 myHashTable.set("age", 30);
 myHashTable.set("city", "New York");
-
 console.log(myHashTable.get("city"));

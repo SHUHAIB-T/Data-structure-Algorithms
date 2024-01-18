@@ -63,5 +63,5 @@ graph.addEdge("B", "C");
 
 graph.display();
 
-graph.removeVertex("A")
-graph.display();
+// graph.removeVertex("A")
+// graph.display();
