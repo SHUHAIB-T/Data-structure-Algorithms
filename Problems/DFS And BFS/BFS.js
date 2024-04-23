@@ -42,6 +42,24 @@ class Graph {
             }
         }
     }
+
+    dfsTraversal(start) {
+        let visited = new Set();
+        let stack = [start];
+        while (stack.length > 0) {
+            let vertex = stack.pop();
+            if (!visited.has(vertex)) {
+                visited.add(vertex);
+                console.log(vertex);
+                let adjacencyVertices = this.adjacencyList[vertex];
+                for (const adj of adjacencyVertices) {
+                    if (!visited.has(adj)) {
+                        stack.push(adj);
+                    }
+                }
+            }
+        }
+    }
 }
 
 let graph = new Graph();
